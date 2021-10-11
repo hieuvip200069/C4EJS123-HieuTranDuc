@@ -1,146 +1,159 @@
 
-// let a = 5;
-// let b = 6;
-// console.log(a,b);
-// // let temp = a;
-// // a = b;
-// // b = temp;
-// [a, b] = [b , a];
-// console.log(a,b);
+/*
+Bai 1
 
-// const s = 'Hello beauty there';
+let str_input = prompt(`Enter input`);
 
-// const a = Array(s);
+let result = '';
 
-// console.log(a);
-
-// const s = 'Hello beuty there';
-
-// a = s.split(' ');
-
-// console.log(a);a
+for(let i = str_input.length() -1 ; i >= 0; i --){
+    result += str_input.charAt(i);
+}
+alert(result);
 
 
-// const a = [4, 5, 7, -8];
+*/
+/*
+Bai 2
 
-// console.log(...a);
-
-
-// BAI 4
-// let list = ['Jeans', 'T-Shirt', 'Socls'];
-// while(true){
- 
-//   let x = '';
-//   while (x.toUpperCase() != 'C' && x.toUpperCase() != 'R' && x.toUpperCase() != 'U' && x.toUpperCase() != 'D') {
-//     if (x != '') {
-//       alert('This command is not supported');
-//     }
-//     console.log(x);
-//     x = prompt('Hi there, welcome to shop admin panel, What do yeu want(C, R, U, D)?');
-  
-//   }
-//   switch (x.toUpperCase) {
-//     case 'C':
-
-//       let temp = prompt(`Enter new iteam`);
-//       list.push(temp);
-//       break;
-//     case 'R':
-//       console.log('The current items are:');
-//       for (let index = 0; index < list.length; index++) {
-//         console.log(index + 1 + ', ' + list[index]);
-  
-//       }
-//       break;
-//     case 'U':
-//       let temp = prompt(`Enter the position you want to update`);
-//       if(temp < list.length && temp >=0){
-//         list[temp] = prompt(`Enter new name`);
-//       }
-//       break;
-//     case 'D':
-//       let temp = prompt(`Enter the position you want to remove`);
-//       if(temp < list.length && temp >=0){
-//         list.splice(temp,1);
-//         alert(`Done`);
-//       }
-      
-//       break
-//     default:
-//       break;
-//   }
-// }
-
-// bai 5
-// let temp = prompt(`Enter a squence ò Number, separated bt commas(,)`);
-// let list = temp.split(',');
-
-// let result = 0;
-// for (let index = 0; index < list.length; index++) {
-//   let tm = Number(list[index])
-//   result +=  tm;
-// }
-// console.log(result);
-// alert(`The sum of them is ${result}`);
+let str_input = prompt(`Enter input`);
+str_input = str_input.split(' ');
 
 
-// Bai 6
-// let temp = prompt(`Enter a squence ò Number, separated by ","`);
-// let list = temp.split(',');
-// let smallest = list[0];
-// for (let index = 1; index < list.length; index++) {
-//   if(smallest> list[index]){
-//     smallest = list[index];
-//   } 
-// }
-// alert(`The smallest number is ${smallest}`);
+str_input[0].charAt(0) = str_input[0].charAt(0).toUpperCase();
 
-// Bai7
-// const arr = [3,4,6,-9,-10,-88,2];
-// let x = prompt(`Enter a Number`);
-// let check = false;
-// for (let index = 0; index < arr.length; index++) {
-//   if(x == arr[index]){
-//     alert(`${x} is FOUND in my array at index ${index}`);    
-//   }
-  
-// }
-// if(check){
-//   alert(`${x} is NOT found in my array `);    
-// }
+let result = '';
+str_input.forEach(element => {
+    result += element+' ';
+});
 
-// bai 8
-// let arr = [5,7,300,90,24,50,73];
-// console.log(`hello, my name is Phuong Nam and here is my sheep sizes`);
-// console.log(...arr);
+console.log(result);
 
-// let max = arr[0];
-// for (let index = 1; index < arr.length; index++) {
-//   if(max < arr[index]){
-//     max = index;
-//     arr.splice(index,1);
+*/
 
-//   }  
-// }
+/*
+Bai 3
+let arr = prompt(`Enter Array`);
 
-// console.log(`Now my biggest sheep has size ${max}, let's shave it`);
+arr = arr.split(',');
 
-// console.log(`After shearing, here is my flock`);
+for(let i = 0 ; i < arr.length ; i++){
+    for(let j = i + 1 ; j < arr.length ; j ++){
+        if(arr[i].trim() == arr[j].trim() ){
+            arr.splice( j , 1 );
+            j--;
+        }
+    }
+}
+console.log(...arr);
+*/
 
-// console.log(...arr);
 
-// for(let i = 1 ; i <= 4; i++){
-//   console.log(`MOUNTH ${i}`);
-//   console.log(`After shearing, here is my flock`);
-//   for (let index = 0; index < arr.length; index++) {
-//         arr[index] += 50;
-    
-//   }
-//   console.log(...arr);
-// }
-// let total = 0;
-// for (let index = 0; index < arr.length; index++) {
-//   total += arr[index]; 
-// }
-// console.log(`My flock has size in total: ${total}`);
-// console.log(`I Would get ${total} * 2$ = ${total*2}`);
+/* 
+bai 4
+const employee1 = {
+    name: `Demo1`,
+    age: 18,
+    salary: 1000,
+    role: 'AS1',
+}
+const employee2 = {
+    name: `demo2`,
+    age: 18,
+    salary: 1000,
+    role: 'AS2',
+}
+const employee3 = {
+    name: `demo3`,
+    age: 18,
+    salary: 1000,
+    role: 'AS3',
+}
+let arr = [employee1, employee2, employee3];
+var status = new Boolean(true);
+let indexcheck = 3;
+
+while (status) {
+    let key = '';
+    while (key.toUpperCase() != 'C' && key.toUpperCase() != 'R' && key.toUpperCase() != 'U' && key.toUpperCase() != 'D') {
+         key = prompt(`Employee Manager: (R,C,U,D) or (RT)`);
+    }
+
+    switch (key.toUpperCase()) {
+        case 'C':
+            let name = prompt(`Enter Name: `);
+            let age = prompt(`Enter Age: `);
+            let salary = prompt(`Enter Salary: `);
+            let role = prompt(`Enter Role: `);
+            const temp1 = {
+                name: name,
+                age: age,
+                salary: salary,
+                role: role,
+            }
+            arr.push(temp1);
+            console.log(...arr);
+            break;
+        case 'R':
+            for(let index1 = 0 ; index1 < arr.length ; index1 ++){               
+                console.log(`Employee {
+                Name: ${arr[index1].name},
+                Age: ${arr[index1].age},
+                Salary: ${arr[index1].salary}
+                Role: ${arr[index1].role} 
+                }`);
+            };
+            break;
+        case 'U':
+            let index = Number(prompt('Enter Index up load~'));
+            if (index >= 0 && index < arr.length) {
+                arr[index].name = prompt(`Enter new Name: `);
+                arr[index].age = prompt(`Enter New Age: `);
+                arr[index].salary = prompt(`Enter New Salary: `);
+                arr[index].role = prompt(`Enter New Role: `);
+            }
+            break;
+        case 'D':
+            let temp = prompt(`Enter the position you want to remove`);
+                  if(temp < arr.length && temp >=0){
+                    arr.splice(temp,1);
+                    alert(`Done`);
+                  }
+            break;
+        case 'RT':
+            status = false;
+            break;          
+        default:
+            status = false;
+            break;
+    }
+   
+}
+*/
+// Fution use to check date 
+
+
+/*
+Bai 5
+function checkDate(strDate) {
+    // create array 
+    var comp = strDate.split('/')
+
+    var d = parseInt(comp[0], 10)
+    var m = parseInt(comp[1], 10)
+    var y = parseInt(comp[2], 10)
+    var date = new Date(y,m-1,d);
+    if (date.getFullYear() == y && date.getMonth() + 1 == m && date.getDate() == d) {
+      return true
+    }
+    return false
+}
+
+
+let date =prompt(`enter Date (dd/MM/yyyy):`);
+if(checkDate){
+    alert(`Date: ${date} is Correct --`);
+}else{
+    alert(`Date: ${date} is Incorrect --`);
+}
+*/
